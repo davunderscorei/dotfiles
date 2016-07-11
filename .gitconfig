@@ -2,6 +2,7 @@
   name  = dav_i
   email = davunderscorei@mailinator.com
 
+
 [alias]
   a    = add
   aa   = add -A
@@ -24,6 +25,7 @@
 
   f    = fetch --prune
   fa   = fetch --all --prune
+  fo   = fetch origin --prune
 
   g    = grep -n --break
 
@@ -33,18 +35,27 @@
   lr   = "!sh -c 'echo \"\" & git log --pretty=format:\"%Cred%h%Creset -%C(auto)%d%Creset %s %C(white)(%cr)%Creset %C(yellow)%ae%Creset\" -20 --graph --all | cat -n;echo & echo \"\"'"
 
   m    = merge
+  mnf  = merge --no-ff
 
   ph   = push
+  pho  = push origin
+  phoh = push origin head
   phod = push origin develop
 
-  pl   = pull --rebase
-  plod = pull --rebase origin develop
+  pl   = pull
+  plo  = pull origin
+  plod = pull origin develop
+
+  pr   = pull --rebase
+  pro  = pull --rebase origin
+  prod = pull --rebase origin develop
 
   r    = rebase
   ra   = rebase --abort
   rc   = rebase --continue
-  ro   = rebase --onto
   ri   = rebase --interactive --autosquash
+  ro   = rebase --onto
+  rs   = rebase --skip
 
   rl   = reflog --pretty='%cd %h %gd %gs'
 
