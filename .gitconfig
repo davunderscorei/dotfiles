@@ -2,7 +2,6 @@
   name  = dav_i
   email = davunderscorei@mailinator.com
 
-
 [alias]
   a    = add
   aa   = add -A
@@ -31,7 +30,7 @@
 
   l    = "!sh -c 'git log --pretty=format:\"%Cred%h%Creset -%C(auto)%d%Creset %s %C(white)(%cr)%Creset %C(yellow)%ae%Creset\" develop.. | cat -n;echo'"
   lc   = "!sh -c 'git log --pretty=format:\"%Cred%h%Creset -%C(auto)%d%Creset %s %C(white)(%cr)%Creset %C(yellow)%ae%Creset\" --graph'"
-  la   = "!sh -c 'git log --pretty=format:\"%Cred%h%Creset -%C(auto)%d%Creset %s %C(white)(%cr)%Creset %C(yellow)%ae%Creset\" --graph --all'"
+  la   = "!sh -c 'git log --pretty=format:\"%Cred%h%Creset -%C(auto)%d%Creset %s %C(white)(%ci)%Creset %C(yellow)%ae%Creset\" --graph --all'"
   lr   = "!sh -c 'echo \"\" & git log --pretty=format:\"%Cred%h%Creset -%C(auto)%d%Creset %s %C(white)(%cr)%Creset %C(yellow)%ae%Creset\" -20 --graph --all | cat -n;echo & echo \"\"'"
 
   m    = merge
@@ -78,24 +77,18 @@
 [init]
   templatedir = ~/.git_template
 
-[merge]
-  conflictstyle = diff3
-	tool = kdiff3
-
 [color]
   ui = true
 
 [credential]
   helper = osxkeychain
-[mergetool "kdiff3"]
-[mergetool "kdiff3"]
-	path = /Applications/kdiff3.app/Contents/MacOS/kdiff3
 [push]
-	default = matching
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
-
+  default = current
+[diff]
+  tool = kdiff3
+[difftool]
+  prompt = false
+[merge]
+  tool = kdiff3
+[mergetool]
+  prompt = false
