@@ -1,6 +1,6 @@
-[user]
-  name  = dav_i
-  email = davunderscorei@mailinator.com
+#[user]
+#  name  = dav_i
+#  email = davunderscorei@mailinator.com
 
 [alias]
   a    = add
