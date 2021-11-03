@@ -1,0 +1,6 @@
+tap "homebrew/bundle"
+tap "homebrew/core"
+brew "bat"
+brew "tldr"
+brew "xh"
+brew "yq"
