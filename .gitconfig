@@ -5,6 +5,7 @@
 [alias]
   a    = add
   aa   = add -A
+  ap   = add --patch
 
   b    = branch
   bd   = branch -d
