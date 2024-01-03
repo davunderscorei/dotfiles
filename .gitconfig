@@ -58,6 +58,7 @@
   ro   = rebase --onto
   rs   = rebase --skip
 
+  ref  = rev-parse --short 
   rl   = reflog --pretty='%cd %h %gd %gs'
 
   rt   = reset
