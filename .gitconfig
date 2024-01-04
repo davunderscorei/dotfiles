@@ -33,7 +33,7 @@
   l    = "!sh -c 'git log --pretty=format:\"%Cred%h%Creset -%C(auto)%d%Creset %s %C(white)(%cr)%Creset %C(yellow)%ae%Creset\" develop.. | cat -n;echo'"
   lc   = "!sh -c 'git log --pretty=format:\"%Cred%h%Creset -%C(auto)%d%Creset %s %C(white)(%cr)%Creset %C(yellow)%ae%Creset\" --graph'"
   la   = "!sh -c 'git log --pretty=format:\"%Cred%h%Creset -%C(auto)%d%Creset %s %C(white)(%ci)%Creset %C(yellow)%ae%Creset\" --graph --all'"
-  lr   = "!sh -c 'echo \"\" & git log --pretty=format:\"%Cred%h%Creset -%C(auto)%d%Creset %s %C(white)(%cr)%Creset %C(yellow)%ae%Creset\" -20 --graph --all | cat -n;echo & echo \"\"'"
+  lr   = "!git log --pretty=format:\"%Cred%h%Creset -%C(auto)%d%Creset %s %C(white)(%cr)%Creset %C(yellow)%ae%Creset\" -20 --graph --all --color=always | cat -n"
 
   m    = merge
   mnf  = merge --no-ff
